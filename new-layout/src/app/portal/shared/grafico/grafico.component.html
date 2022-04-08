@@ -1,0 +1,30 @@
+<mat-card class="card ">
+  <mat-card-header>
+    <mat-card-title tabindex="0">{{titulo}}</mat-card-title>
+    <div class="card-top-action">
+        <!--button style="border: none; background-color: white; cursor: pointer;" mat-icon-button
+                matTooltipPosition="above"
+                matTooltipClass="tooltip"
+                (keypress)="onKeyPressInfo($event)">
+            <mat-icon (click)="abrirInfo()" alt="descrição">info</mat-icon>
+        </button-->
+    </div>
+  </mat-card-header>
+  <!--div *ngIf="informacao" class="informacao">
+    {{descricao}}
+  </div-->
+  <div class="content">
+    <div id="chart-{{id}}"></div>
+  </div>
+  <mat-expansion-panel class="mat-elevation-z0" style="font-size:larger">
+    <mat-expansion-panel-header cdkMonitorSubtreeFocus class="left-aligned-header" style="font-size: large;">
+      <mat-panel-title>
+        <!--mat-icon alt="descrição">info</mat-icon-->
+        Descrição
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="informacao" tabindex="0" cdkMonitorSubtreeFocus>
+      {{descricao}}
+    </div>            
+  </mat-expansion-panel>
+</mat-card>

@@ -1,0 +1,50 @@
+@page portrait {
+  size: A4 portrait;
+  margin: 2cm 3cm;
+}
+
+@page landscape {
+  size: A4 landscape;
+  margin: 2cm 3cm;
+}
+
+.content {
+  width: 270mm;
+}
+
+// .content {
+//   width: 100%;
+// }
+
+// @media screen {
+//   :host {
+//     display: none;
+//   }
+// }
+
+// @media print {
+
+//   @page portrait {
+//     size: A4 portrait;
+//     margin: 2cm 3cm;
+//   }
+
+//   @page landscape {
+//     size: A4 landscape;
+//     margin: 2cm 3cm;
+//   }
+
+//   .content {
+//     width: 270mm;
+//   }
+// }
+
+
+// @media print and (orientation: landscape) {
+
+  
+
+//   // .content {
+//   //   width: 270mm;
+//   // }
+// }

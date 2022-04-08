@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="painel">
+        <div class="painel-content" *ngIf="painel != undefined">
+            <div class="input-box">
+
+                <div class="titulo-container">
+                  <span class="titulo" id="titulo-valor">{{painel.titulo}}</span>
+              </div>
+              <div class="autor-container">
+                <span class="autor" id="autor-valor">{{painel.autor}}</span>
+            </div>
+            <div class="tema-container">
+                <span class="tema" id="tema-valor">Tema: {{painel.tema}}</span>
+            </div>
+                <div class="descricao-container">
+                    <span class="descricao" id="descricao-valor">{{painel.descricao}}</span>
+                </div>
+            </div>
+            <div class="template">
+                <div *ngFor="let widget of painel.template.widgets; let i = index" class="widget">
+                    <div class="grafico" id="print-widget-{{i}}" *ngIf="widget.indicador != undefined">
+                        <app-print-grafico *ngIf="widget.indicador.tipo !== 'map'" id="print-grafico-{{i}}"
+                            [tipo]="widget.indicador.tipo"
+                            [dataSet$]="toObservable(widget.indicador.series)"
+                            [titulo]="widget.indicador.titulo"
+                            [descricao]="widget.indicador.descricao"></app-print-grafico>
+                        <app-print-mapa *ngIf="widget.indicador.tipo === 'map'" [indicador]="widget.indicador" ></app-print-mapa>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="painel">
+        <div class="painel-header">
+            <button mat-icon-button class="back-button" id="back-button" (click)="voltarNavegacao()" tabindex="0" (keypress)="onKeyPressCor($event)" aria-hidden="false" aria-label="voltar navegação">
+                <mat-icon>arrow_back_ios</mat-icon>
+            </button>
+            <div class="painel-title">
+                <p class="titulo" id="titulo" style="margin: 0 !important">Perfil do painel</p>
+            </div>
+            <div id="imprimir-button">
+                <button mat-button id="imprimir" (click)="onPrintPainel()">Imprimir / Salvar</button>
+            </div>
+        </div>
+        <div class="painel-content" *ngIf="painel != undefined">
+            <div class="input-box">
+                <div class="titulo-container">
+                  <span class="titulo" id="titulo-valor"><h2 autofocus tabindex="0">{{painel.titulo}}</h2></span>
+              </div>
+              <div class="autor-container">
+                <span class="autor" id="autor-valor" tabindex="0">{{painel.autor}}</span>
+            </div>
+            <div class="tema-container">
+                <span class="tema" id="tema-valor"><h3 tabindex="0">Tema: {{painel.tema}}</h3></span>
+            </div>
+                <div class="descricao-container">
+                    <span class="descricao" id="descricao-valor" tabindex="0">{{painel.descricao}}</span>
+                </div>
+            </div>
+            <div class="template" id="conteudo">
+                <div *ngFor="let widget of painel.template.widgets; let i = index" class="widget">
+                    <div class="grafico" id="widget-{{i}}" *ngIf="widget.indicador != undefined">
+                        <app-grafico *ngIf="widget.indicador.tipo !== 'map'" id="grafico-{{i}}"
+                            [tipo]="widget.indicador.tipo" [dataSet$]="toObservable(widget.indicador.series)"
+                            [titulo]="widget.indicador.titulo" [descricao]="widget.indicador.descricao"></app-grafico>
+                        <app-mapa *ngIf="widget.indicador.tipo === 'map'" [indicador]="widget.indicador" [descricao]="widget.indicador.descricao"></app-mapa>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

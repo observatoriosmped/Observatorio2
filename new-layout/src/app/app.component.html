@@ -1,0 +1,19 @@
+  <div id="barraacessibilidade">
+    <app-acessibility-bar></app-acessibility-bar>    
+  </div>
+  <div id="barramenu">
+    <app-toolbar></app-toolbar>
+    <div id="menubar">
+      <app-menu-bar></app-menu-bar>
+    </div>
+  </div>
+  <div>
+    <div id="content" class="content"style="min-block-size: 70vh;">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <router-outlet name="print"></router-outlet>
+  <div id="footbar">
+    <app-foot-bar></app-foot-bar>
+  </div>
+

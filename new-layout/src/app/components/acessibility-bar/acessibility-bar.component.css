@@ -1,0 +1,55 @@
+.table {
+    display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+
+#atalhos {
+    background-color: #EEEEE4;
+    color: #333333;
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    width: 100%;
+    align-content: center;
+}
+
+.fontsize {
+    background-color: #f9f9f9;
+    width: 8px;
+    color: #333333;
+    padding: 4px;
+    margin: 3px 5px 0 0;
+    border: 1px solid #c6c6c6;
+    border-radius: 50%;
+    font-size: 0.8125em;
+    font-weight: bold;
+    text-align: center;
+}
+
+li {
+    display: inline;
+    float: left;
+    width: 230px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+list a{
+    display: inline-block; 
+}
+
+.hover2:hover {
+   cursor: pointer; 
+   background-color: #333333;
+   color: #f9f9f9;
+}
+
+.fontsize:hover{
+    background-color: #333333 ;
+    color: #f9f9f9;
+    cursor: pointer;
+}
+
+  

@@ -1,0 +1,35 @@
+<div class="container" id="general-container"> 
+  <div id="titulo">
+    <h1>Painéis</h1>
+  </div>
+  <div class="lista-paineis">     
+    <div class="pesquisa {{classe}}">
+      <mat-form-field class="form-field">
+        <!-- <input matInput (keyup)="applyFilter($event)" id="filtro" placeholder="Filtro"> -->
+        <mat-label>Pesquise por um painel ou por um tema</mat-label>
+        <span matPrefix>
+          <mat-icon alt="Pesquisar">search</mat-icon> &nbsp;
+        </span>
+        <input type="text" matInput (keyup)="applyFilter($event)" id="filtro" placeholder="Ex: Deficientes auditivos">
+      </mat-form-field>
+    </div>
+    <div class="lista-paineis-content" column>
+      <div class="grid-list" id="conteudo" isFocusable *ngIf="paineisDataSource.filteredData.length != 0">
+          <mat-card cdkMonitorSubtreeFocus class="painel-card" *ngFor="let painel of paineisDataSource.filteredData" id="{{painel.titulo}}" [routerLink]="[painel.id]" (keypress)="irPainel($event)">
+            <mat-card-header class="header">
+              <mat-card-title><h2 [attr.aria-label]="painel.titulo" aria-hidden="false">{{ painel.titulo | slice:0:45 }}{{ painel.titulo.length > 45 ? '...' : '' }}</h2></mat-card-title>
+              <mat-icon alt="painel">dashboard</mat-icon>
+            </mat-card-header>
+            <div class="content">
+              <div class="tema"><span>{{painel.tema | slice:0:60}} {{ painel.tema.length > 60 ? '...' : '' }}</span></div>
+              <div class="descricao"><span>{{painel.descricao | slice:0:400 }} {{ painel.descricao.length > 400 ? '...' : '' }}</span></div>
+              <div class="autor"><span>Publicado por {{painel.autor | slice:0:50}} {{ painel.autor.length > 50 ? '...' : '' }}</span></div>
+            </div>
+          </mat-card>
+      </div>
+      <div class="sem-resposta" *ngIf="paineisDataSource.filteredData.length == 0">
+        <div class="img"><img src="assets/notfound.png"></div>
+        <p>Nenhum resultado foi encontrado</p>
+      </div>
+    </div>
+</div>

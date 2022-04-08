@@ -1,0 +1,19 @@
+<div class="table">
+    <ul id="atalhos">  
+        <li><a aria-label="Ir para o conteudo" class="hover2" id="irConteudo" (click)="irConteudo()" tabindex="1" title="Ir para o conteudo">Ir para o conteúdo [1]</a></li>  
+          
+        <li><a class="hover2" id="irMenu" (click)="irMenu()" tabindex="1" title="Ir para o menu">Ir para o menu [2]</a></li>  
+              
+        <li><a class="hover2" id="irRodapé" (click)="irRodape()" tabindex="1" title="Ir para o rodapé"> Ir para o rodapé [3]</a></li>   
+              
+        <li><a class="hover2" id="irContraste" (click)="altoContraste()" tabindex="1" title="Alto contraste">Alto contraste [4]</a></li>
+            
+        <li><a class="hover2" id="irAcessibilidade" tabindex="1" title="Acessibilidade" (click)="openDialog()" (keypress)="onKeyPressAcess($event)">Acessibilidade[5]</a></li> 
+        
+        <li>
+            <a class="fontsize" id="aumentar" (click)="aumentarFonte()" tabindex="1" title="Aumentar Tamanho do Texto">A+</a>
+            <a class="fontsize" id="diminuir" (click)="diminuirFonte()" tabindex="1" title="Diminuir Tamanho do Texto">A-</a>
+        </li>
+    </ul>
+</div>
+  

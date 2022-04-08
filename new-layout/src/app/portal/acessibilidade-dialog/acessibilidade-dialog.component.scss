@@ -1,0 +1,11 @@
+div{
+    mat-dialog-actions{
+        button{
+            color: var(--color-secondary-text);        
+        }
+    
+        button:hover, button:focus{
+            text-decoration: underline;
+        }
+    }
+}

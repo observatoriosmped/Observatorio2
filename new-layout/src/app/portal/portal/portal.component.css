@@ -1,0 +1,25 @@
+.container {
+  text-align: center;
+}
+
+#titulo {
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+}
+
+h1{
+  font-size: 38px;
+  color: #1C2E8A;
+  font-weight: bolder;
+  margin-top: 54px;
+  margin-botton: 54px;
+  width: 100%;
+  line-height: 46px;
+}
+
+.mat-input-element {
+  color: #333333;
+  background: #FFFFFF;
+  caret-color: #333333;
+}

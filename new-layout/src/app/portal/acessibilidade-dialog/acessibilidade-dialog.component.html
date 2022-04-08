@@ -1,0 +1,20 @@
+<div (keypress)="onKeyPressAcess($event)" tabindex="0">
+    <h2>Acessibilidade digital</h2>
+    <p>O Portal do Observatório atende requisitos de acessibilidade digital com foco na usabilidade, navegação e compromisso com as pessoas com e sem deficiência.</p>
+    <br>
+    <p>Acessibilidade Digital é a eliminação de barreiras na Web. Portanto, o portal é projetado de modo que todas as pessoas possam navegar, entender e interagir com a página. A implementação do Portal do Observatório democratiza o acesso e facilita a navegação dos usuários, independentemente das suas capacidades físico motor e perceptivas, culturais e sociais.</p>
+    <br>
+    <h3>Os atalhos utilizados pelo portal são:</h3>
+    <ul>
+        <li>Teclando-se Alt + 1 em qualquer página do portal, chega-se diretamente ao começo do conteúdo principal da página.</li>
+        <li>Teclando-se Alt + 2 em qualquer página do portal, chega-se diretamente ao menu principal da página.</li>
+        <li>Teclando-se Alt + 3, chega-se diretamente à entrada de pesquisa do portal.</li>
+        <li>Teclando-se Alt + 4 em qualquer página do portal, chega-se diretamente à funcionalidade do alto-contraste do ASES-WEB.</li>
+        <li>Teclando-se Alt + 5 em qualquer página do portal, chega-se diretamente à página de descrição da acessibilidade do ASES-WEB.</li>
+        <li>Teclando-se Alt + 6 em qualquer página do portal, chega-se diretamente ao rodapé do sítio.</li>
+    </ul>
+    <p>Esses atalhos valem para os navegadores Google Chrome e Internet Explorer, mas existem algumas variações para outros navegadores, como Alt+Shift+número para Mozilla Firefox.</p>
+    <mat-dialog-actions>
+        <button mat-button mat-dialog-close (keypress)="onKeyPressAcess($event)">Fechar</button>
+    </mat-dialog-actions>
+</div>

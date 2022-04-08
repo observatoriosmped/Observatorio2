@@ -1,0 +1,108 @@
+:host {
+    display: block;
+    width: 270mm;
+    max-width: 270mm;
+    height: 100%;
+  
+    .container {
+        display: block;
+        width: 270mm;
+        max-width: 270mm;
+  
+        .painel {
+            display: block;
+  
+            .painel-content {
+                display: block;
+                width: 270mm;
+                max-width: 270mm;
+  
+                .input-box {
+                    width: 270mm;
+                    max-width: 270mm;
+    
+                    .autor-container {
+                        display: flex;
+                        -webkit-box-pack: center;
+                        justify-content: center;
+                        padding: 0 20vw;
+                        overflow-wrap: break-word;
+
+                        .autor {
+                            font-size: 20px;
+                            margin: 10px 0;
+                            font-weight: 300;
+                            color: #888888;
+                            line-height: 26px;
+                        }
+                    }
+    
+                    .titulo-container {
+                        display: flex;
+                        justify-content: center;
+
+                        .titulo {
+                            font-size: 30px;
+                            margin: 0;
+                            font-weight: 400;
+                            color: #888;
+                            overflow-wrap: break-word;
+                            padding: 0 20vw;
+                            line-height: 30px;
+                        }
+                    }
+    
+                    .tema-container {
+                        display: flex;
+                        -webkit-box-pack: center;
+                        justify-content: center;
+                        padding: 0 20vw;
+                        overflow-wrap: break-word;
+
+                        .tema {
+                            font-size: 20px;
+                            margin: 0;
+                            font-weight: 300;
+                            color: #888888;
+                            line-height: 26px;
+                        }
+                    }
+    
+                    .descricao-container {
+                        display: flex;
+                        -webkit-box-pack: center;
+                        justify-content: center;
+                        margin: 20px 0 0;
+                        padding: 0 10vw;
+
+                        .descricao {
+                            font-size: 20px;
+                            margin: 0;
+                            font-weight: 200;
+                            overflow-wrap: break-word;
+                            color: #888;
+                            line-height: 26px;
+                        }
+                    }
+                }
+    
+                .template {
+                    display: block;
+                    width: 270mm;
+                    max-width: 270mm;
+                    height: 100%;
+    
+                    .widget {
+                        position: relative;
+                        border-radius: 5px;
+                        margin: 16px;
+                        min-width: 512px;
+                        min-height: 256px;
+                        page-break-inside: avoid;
+    
+                    }
+                }
+            }
+        }
+    }
+}

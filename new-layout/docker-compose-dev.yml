@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  portal-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    container_name: portal-frontend
+    restart: unless-stopped
+    ports:
+      - "4200:80"
+    volumes:
+      - ./src:/home/node/app/src
+    networks:
+      - observatorio-network
+networks:
+  observatorio-network:
+    external:
+      name: observatorio-network

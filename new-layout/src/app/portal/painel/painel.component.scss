@@ -1,0 +1,149 @@
+:host {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+  height: 100%;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .painel {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+
+      .painel-header {
+        display: flex;
+        align-items: center;
+
+        .back-button {
+          margin: 24px 16px;
+          cursor: pointer;
+        }
+
+        .painel-title {
+          font-size: 24px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 96px;
+        }
+
+        #editar-button {
+          margin: auto 16px auto auto;
+        }
+
+        #imprimir-button{
+          #imprimir{
+            color: var(--color-primary);
+          }
+        }
+      }
+
+      .painel-content {
+        display: flex;
+        flex-direction: column;
+
+        .input-box {
+
+          .autor-container {
+            display: flex;
+            justify-content: center;
+            padding: 0 20vw;
+            overflow-wrap: break-word;
+
+            .autor {
+              font-size: 20px;
+              margin: 10px 0;
+              font-weight: 300;
+              color: var( --color-terciary-text);
+            }
+
+            h3{
+              font-size: 20px;
+            }
+          }
+
+          .titulo-container {
+            display: flex;
+            justify-content: center;
+
+            .titulo {
+              font-size: 30px;
+              margin: 0 0 0 0 !important;
+              font-weight: 400;
+              color: var( --color-terciary-text);
+              overflow-wrap: break-word;
+              padding: 0 20vw;
+
+              h2{
+                font-size: 30px;
+              }
+            }
+          }
+
+          .tema-container {
+            display: flex;
+            justify-content: center;
+            padding: 0 20vw;
+            overflow-wrap: break-word;
+
+            .tema {
+              font-size: 20px;
+              margin: 0;
+              font-weight: 300;
+              color: var( --color-terciary-text);
+            }
+          }
+
+          .descricao-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0 0;
+            padding: 0 10vw;
+
+            .descricao {
+              font-size: 20px;
+              margin: 0;
+              font-weight: 200;
+              overflow-wrap: break-word;
+              color: var( --color-terciary-text);
+            }
+          }
+        }
+
+        .template {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-self: center;
+          width: 100%;
+          height: 100%;
+          max-width: 1600px;
+          background-color: var(--color-background);
+
+          .widget {
+            position: relative;
+            flex: 1 1 512px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 16px;
+            min-width: 512px;
+            min-height: 256px;
+
+            .grafico {
+              height: 100%;
+            }
+
+            /*.grafico:hover{
+              transform: scale(1.02);
+            }*/
+          }
+        }
+      }
+    }
+  }
+}

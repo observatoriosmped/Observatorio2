@@ -1,0 +1,47 @@
+:host {
+    display: flex;
+    justify-content: center;
+    mat-card {
+        width: 100%;
+        display: flex;
+        height: 500px;
+        flex-direction: column;
+        align-items: center;
+        .titulo {
+            width: 100%;
+        }
+        .map {
+            height: 500px;
+            width: 100%;
+        
+        }
+    }
+}
+::ng-deep .legend {
+    line-height: 18px;
+    color: #555;
+}
+::ng-deep .legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+::ng-deep .legend div {
+    font-weight: 600;
+    font-size: 14px;
+    height: 20px;
+    display: flex;
+    margin: 5px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+::ng-deep .info.legend.leaflet-control {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 12px 0px grey, 0px 0px 3px 0px black;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}

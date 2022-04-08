@@ -1,0 +1,75 @@
+:host {
+  width: 100%;
+
+  .card {
+    width: calc(100% - 32px);
+    height: calc(100% - 32px);
+
+    mat-card-header {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      width: 100%;
+    }  
+  }
+}
+
+:ng-deep .c3-lines {
+  stroke-width: 50px;
+}
+
+::ng-deep .c3-ygrid-line line {
+  stroke: rgb(88, 88, 88);
+}
+
+::ng-deep .c3-xgrid-line line {
+  stroke: red;
+}
+
+::ng-deep .c3-xgrid-line text{
+  fill: #020202;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+::ng-deep .c3-ygrid-line text{
+  fill: #020202;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+@media print {
+  :host {
+    display: block;
+    height: 100%;
+    width: 270mm;
+    max-width: 270mm;
+
+    .card {
+      width: 260mm;
+  
+      mat-card-header {
+        display: block;
+
+        button {
+          display: none;
+        }
+      }
+  
+      .content {
+        width: 250mm;
+
+        .c3 {
+          width: 250mm;
+          max-width: 250mm;
+
+          svg {
+            width: 250mm;
+            max-width: 250mm;
+          }
+        }
+      }
+    }
+  }
+}

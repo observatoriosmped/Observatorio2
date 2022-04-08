@@ -1,0 +1,16 @@
+#toolbar-principal {
+    background-color: #FFFFFF;
+    color: #1C2E8A;
+    height: 128px;
+    width: 100%;
+    position: relative;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: bold;    
+}
+
+.logo {
+    height: 106px;
+}

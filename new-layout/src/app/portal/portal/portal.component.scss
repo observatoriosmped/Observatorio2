@@ -1,0 +1,159 @@
+:host {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+  height: 100%;
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;    
+
+    .lista-paineis {
+      max-height: calc(100% - 32px);
+      display: flex;
+      flex-direction: column;
+      
+      .logo-container {
+        display: flex;
+        justify-content: center;
+        padding: 5px 0 0 0;
+
+        .logo {
+          height: 320px;
+          width: 320px;
+          object-fit: contain;
+        }
+      }
+      
+      .pesquisa {
+        transition: width 1.5s ease, font-size 1.5s ease, padding 1.5s ease;
+
+        .form-field {
+          transition: width 1.5s ease;
+        }
+      }
+
+      .big {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0 5px 0;
+
+        .form-field {
+          width: 660px;
+          font-size: 20px;
+          margin: 0;
+
+          mat-label{
+            color: #333333;
+          }
+
+          span {
+            mat-icon {
+              font-size: 20px;
+              color: #333333;
+            }
+          }
+        }
+      }
+
+      .small {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+
+        .form-field {
+          width: 485px;
+          margin: 0;
+
+          span {
+            mat-icon {
+              font-size: 20px;
+              color: #8a8a8a;
+            }
+          }
+        }
+      }
+
+      .lista-paineis-content {
+        background-color: #FFFFFF;
+
+        .grid-list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          .painel-card {
+            width: 530px;
+            height: 200px;
+            margin: 16px;
+            box-shadow: 0px 1px 5px -1px black;
+            cursor: pointer;
+
+            .header {
+              display: flex;
+              justify-content: space-between;
+              color: #333333;
+            }
+
+            .content {
+              display: flex;
+              flex-direction: column;
+              flex-wrap: nowrap;
+              height: 170px;
+              justify-content: space-between;
+
+              .titulo {
+                line-height: 26px;
+              }
+
+              .autor {
+                display: flex;
+                justify-content: flex-end;
+                color: #333333;
+                font-weight: 400;
+                font-size: 16px;
+                overflow: break-word;
+                line-height: 26px;
+              }
+
+              .descricao {
+                font-size: 14px;
+                font-weight: 400;
+                color: #333333;
+                overflow: break-word;
+                line-height: 20px;
+              }
+
+              .tema {
+                font-size: 16px;
+                font-weight: 400;
+                color: #333333;
+                overflow: break-word;
+                line-height: 26px;
+              }
+            }
+          }
+
+          /*mat-card:focus, mat-card:hover{
+            border: inset gray;
+          }*/
+          
+        }
+      }
+    }
+    .sem-resposta {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      color: #333333;
+      .img {
+        img {
+          width: 40px;
+          height: 40px;
+          filter: opacity(0.5);
+        }
+      }
+    }
+  }
+}
